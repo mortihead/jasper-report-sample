@@ -136,23 +136,13 @@
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports</artifactId>
-            <version>6.3.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>eclipse</groupId>
-                    <artifactId>jdtcore</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>bouncycastle</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
+            <version>6.17.0</version>
         </dependency>
 
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports-fonts</artifactId>
-            <version>6.0.0</version>
+            <version>6.17.0</version>
         </dependency>
 
     </dependencies>
