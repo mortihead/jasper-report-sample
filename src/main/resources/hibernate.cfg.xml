@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+<!--        jdbc:h2:tcp://127.0.0.1:9092/local_db-->
+<!--        jdbc:h2:file:C:/Users/17889515/IdeaProjects/hibernateapp/db/local_db;AUTO_SERVER=TRUE-->
+        <!--        jdbc:h2:file:C:/Users/NBochkarev/.h2/local_db;AUTO_SERVER=TRUE-->
+        <property name="hibernate.connection.url">jdbc:hsqldb:mem://sample_db</property>
+
+    </session-factory>
+</hibernate-configuration>
