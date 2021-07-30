@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import io.swagger.annotations.ApiOperation;
+import ru.mortihead.model.BrandEntity;
 import ru.mortihead.model.CarEntity;
 import ru.mortihead.model.CityEntity;
 import ru.mortihead.service.CarService;
@@ -38,10 +39,18 @@ public class RestController {
         return carsService.findAll();
     }
 
-    @GetMapping("/download-pdf")
+    @GetMapping("/cars/{id}")
+    @ApiOperation("Получение запись об автомобиле по id")
+    public CarEntity getCarsList(@ApiParam(value = "ID автомобиля", example = "1")
+                                           @PathVariable("id") Integer carId) {
+        return carsService.findById(carId);
+    }
+
+    @GetMapping("/download-pdf/{brandId}")
     @ApiOperation("Сохранение отчета в PDF")
-    public ResponseEntity<Resource> downloadPdf() throws Exception {
-        return reportService.downloadPdf();
+    public ResponseEntity<Resource> downloadPdf(@ApiParam(value = "ID бренда автомобиля", example = "1")
+                                                    @PathVariable("brandId") Integer brandId) throws Exception {
+        return reportService.downloadPdf(brandId);
     }
 
 }

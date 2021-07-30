@@ -5,5 +5,5 @@ import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
 
 public interface ReportService {
-    ResponseEntity<Resource> downloadPdf() throws JRException, Exception;
+    ResponseEntity<Resource> downloadPdf(Integer brandId) throws JRException, Exception;
 }

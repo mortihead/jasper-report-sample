@@ -37,13 +37,13 @@ public class ReportServiceImpl implements ReportService {
     private final  CarService  carsService;
 
     @Override
-    public ResponseEntity<Resource> downloadPdf() throws Exception {
+    public ResponseEntity<Resource> downloadPdf(Integer brandId) throws Exception {
 
         Session session = createSession();
         Transaction transaction = session.beginTransaction();
 
         Map parameters = getParameters(session);
-        JRDataSource dataSource = getDataSource();
+        JRDataSource dataSource = getDataSource(brandId);
         URL reportTemplate = getClass().getClassLoader().getResource("report_templates/report1.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(reportTemplate.getPath());
         jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
@@ -71,8 +71,8 @@ public class ReportServiceImpl implements ReportService {
 
     }
 
-    private JRDataSource getDataSource() {
-        List<CarEntity> cars = carsService.findAll();
+    private JRDataSource getDataSource(Integer brandId) {
+        List<CarEntity> cars = carsService.findByBrandId(brandId);
         return new JRBeanCollectionDataSource(cars);
     }
 
