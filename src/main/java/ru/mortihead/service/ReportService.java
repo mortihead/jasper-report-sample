@@ -6,4 +6,6 @@ import org.springframework.http.ResponseEntity;
 
 public interface ReportService {
     ResponseEntity<Resource> downloadPdf(Integer brandId) throws JRException, Exception;
+
+    ResponseEntity<Resource> downloadMultipleDataSourcesReportPdf() throws Exception;
 }

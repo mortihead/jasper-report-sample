@@ -46,11 +46,18 @@ public class RestController {
         return carsService.findById(carId);
     }
 
-    @GetMapping("/download-pdf/{brandId}")
+    @GetMapping("/download-pdf-simple-report/{brandId}")
     @ApiOperation("Сохранение отчета в PDF")
-    public ResponseEntity<Resource> downloadPdf(@ApiParam(value = "ID бренда автомобиля", example = "1")
+    public ResponseEntity<Resource> downloadSimpleReportPdf(@ApiParam(value = "ID бренда автомобиля", example = "1")
                                                     @PathVariable("brandId") Integer brandId) throws Exception {
         return reportService.downloadPdf(brandId);
     }
+
+    @GetMapping("/download-pdf-multiple-datasources-report")
+    @ApiOperation("Сохранение отчета в PDF")
+    public ResponseEntity<Resource> downloadMultipleDataSourcesReportPdf() throws Exception {
+        return reportService.downloadMultipleDataSourcesReportPdf();
+    }
+
 
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_multiple_datasources" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="22beecc7-62cc-4e05-9755-9ceeabbff35d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="SubReportCars" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SubReportCarsDatasource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" isForPrompting="false"/>
+	<parameter name="SubReportCities" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SubReportCitiesDatasource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="420" height="30" uuid="625494eb-d781-4245-aa00-bf11540d2e56"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="18"/>
+				</textElement>
+				<text><![CDATA[Отчет с несколькими источниками данных]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="78">
+			<subreport>
+				<reportElement x="0" y="0" width="550" height="60" uuid="256e685c-e9db-45c4-8ddb-1e3b684b4a84"/>
+				<dataSourceExpression><![CDATA[$P{SubReportCarsDatasource}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SubReportCars}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="78">
+			<subreport>
+				<reportElement x="0" y="0" width="550" height="60" uuid="37ff7249-6340-4c27-bba0-3ae79b653dba"/>
+				<dataSourceExpression><![CDATA[$P{SubReportCitiesDatasource}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SubReportCities}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

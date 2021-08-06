@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubReport_Cars" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8b688b14-ccff-4cc5-a44c-2efbd5e260c8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="DataStyle" fill="Solid" hTextAlign="Center" hImageAlign="Center" vTextAlign="Middle" vImageAlign="Middle" pattern="" isBlankWhenNull="true" fontName="Arial" fontSize="10" isBold="false" pdfFontName="Arial" pdfEncoding="Identity-H" isPdfEmbedded="true">
+		<pen lineWidth="0.0"/>
+		<box>
+			<pen lineWidth="1.0"/>
+			<topPen lineWidth="1.0"/>
+			<leftPen lineWidth="1.0"/>
+			<bottomPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+		<paragraph firstLineIndent="2" leftIndent="2" rightIndent="2" spacingBefore="1"/>
+	</style>
+	<style name="HeaderStyle" mode="Opaque" forecolor="#000000" backcolor="#C0C0C0" fill="Solid" hTextAlign="Center" hImageAlign="Center" vTextAlign="Middle" vImageAlign="Middle" pattern="" fontName="Arial" fontSize="10" isBold="true" pdfFontName="Arial" pdfEncoding="Identity-H" isPdfEmbedded="true">
+		<pen lineWidth="0.0"/>
+		<box>
+			<pen lineWidth="1.0"/>
+			<topPen lineWidth="1.0"/>
+			<leftPen lineWidth="1.0"/>
+			<bottomPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="name" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="203" height="30" uuid="48238657-bb9c-43a1-8f36-0b47419ad2b0"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Cities - SubReport2]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement style="HeaderStyle" stretchType="RelativeToTallestObject" x="40" y="0" width="163" height="20" uuid="c53b9835-92c2-4d46-bbd4-05af7e1f0cab">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Sans" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Наименование]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="HeaderStyle" stretchType="RelativeToTallestObject" x="0" y="0" width="40" height="20" uuid="596eea6c-06ad-4df2-ae4e-71b7b558c0f0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Sans" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[№ п/п]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField isBlankWhenNull="true">
+				<reportElement style="DataStyle" stretchType="RelativeToTallestObject" x="40" y="0" width="163" height="20" uuid="30437942-abe4-4b73-b2c5-c25482e450d3"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="DataStyle" stretchType="RelativeToTallestObject" x="0" y="0" width="40" height="20" uuid="be6f0b61-cc50-46ce-8059-c244446dbca9">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

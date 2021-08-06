@@ -19,5 +19,7 @@ insert into cars (name_car, brand_id, price) values ('2106', 4, 1000);
 insert into cars (name_car, brand_id, price) values ('Vesta', 4, 4000);
 insert into cars (name_car, brand_id, price) values ('Niva', 4, 5000);
 
-insert into city (name_city, population) values ('Ufa', 100000);
-insert into city (name_city, population) values ('Moscow', 1000000);
+insert into city (name_city, population) values ('Ufa', 1240000);
+insert into city (name_city, population) values ('Moscow', 19000000);
+insert into city (name_city, population) values ('Пермь', 1100000);
+insert into city (name_city, population) values ('Челябинск', 1150000);
