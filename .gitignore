@@ -1,5 +1,7 @@
 target/
 .idea/
+.gigaide/
+.vscode/	
 logs/
 *.iml
 *.log

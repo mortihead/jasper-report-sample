@@ -12,13 +12,20 @@ import ru.mortihead.repository.CarsRepository;
 import java.util.List;
 import java.util.Objects;
 
-@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @Transactional(readOnly = true)
 @Service
 public class CarServiceImpl implements CarService {
 
+    @Autowired
     private final CarsRepository   carsRepo;
+    @Autowired
     private final BrandsRepository brandRepo;
+
+    public CarServiceImpl(CarsRepository carsRepo, BrandsRepository brandRepo) {
+        this.carsRepo = carsRepo;
+        this.brandRepo = brandRepo;
+    }
+
 
     @Override
     @Transactional

@@ -26,12 +26,18 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class ReportServiceImpl implements ReportService {
 
     private static JasperPrint jasperPrint;
+    @Autowired
     private final CarService carsService;
+    @Autowired
     private final CityService cityService;
+
+    public ReportServiceImpl(CarService carsService, CityService cityService) {
+        this.carsService = carsService;
+        this.cityService = cityService;
+    }
 
     @Override
     public ResponseEntity<Resource> downloadPdf(Integer brandId) throws Exception {
