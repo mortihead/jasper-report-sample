@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SwaggerConfig {
 
-    @Value("${project.version}")
+    @Value("${application.version}")
     private String version;
 
 
